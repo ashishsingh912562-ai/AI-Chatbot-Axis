@@ -18,7 +18,7 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 
 # Page config
 st.set_page_config(page_title="Gemini Chat", page_icon="🤖")
-st.title("🤖 Gemini Multi-Turn Chat")
+st.title(" XSpark 🤖")
 
 # Initialize chat history
 if "chat" not in st.session_state:
@@ -57,7 +57,7 @@ if user_prompt:
             for char in assistant_reply:
                 typed_text += char
                 placeholder.markdown(typed_text)
-                time.sleep(0.0002)  # typing speed (adjust)
+                time.sleep(0.02)  # typing speed (adjust)
 
     st.session_state.messages.append(
         {"role": "assistant", "content": assistant_reply}
@@ -68,6 +68,11 @@ if st.sidebar.button("🔄 Reset Conversation"):
     st.session_state.chat = model.start_chat(history=[])
     st.session_state.messages = []
     st.experimental_rerun()
+
+
+
+st.markdown('**Design And Developed by:Ashish Singh**')
+
 
 
 
