@@ -13,7 +13,7 @@ st.set_page_config(page_title="XSpark AI", page_icon="⚡", layout="wide")
 
 # Sidebar Configuration
 with st.sidebar:
-    st.title("⚙️ Configuration")
+    st.title("⚙️ Setting")
     
     # Model Selection
     model_name = st.selectbox(
@@ -142,7 +142,7 @@ if user_prompt:
     st.session_state.messages.append(
         {"role": "assistant", "content": full_response}
     )
-st.markdown('**Design And Developed by:Ashish Singh**')
+
 
 
 
